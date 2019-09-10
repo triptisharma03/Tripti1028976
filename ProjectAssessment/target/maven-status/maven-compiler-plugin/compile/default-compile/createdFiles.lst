@@ -1,0 +1,10 @@
+com\assess\pageObjects\Tshirt.class
+com\assess\setup\BasePage.class
+com\assess\pageObjects\OrderHistory.class
+com\assess\stepDefinition\StepDefinition.class
+com\assess\pageObjects\Address.class
+com\assess\pageObjects\Payment.class
+com\assess\pageObjects\SignInPage.class
+com\assess\pageObjects\Shipping.class
+com\assess\runner\TestCaseRunner.class
+com\assess\pageObjects\MyAccount.class
