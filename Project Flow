@@ -1,0 +1,43 @@
+The project flow is as given:-
+
+There are two scenarios to be tested in feature file
+First Scenario: To order a Tshirt and verify order history
+Second Scenario: To update personal information (first name)
+
+Credentials used are :
+username : someone@xample.com
+password : Password123 
+ 
+ Go to the project and then src/test/java
+ Open TestCaseRunner.java class from com.assess.runner package
+ From there go to the feature file mentioned in features attribute of @CucumberOptions annotation
+ In FeatureFile.feature file there are two scenarios mentioned
+   => Background is used to open the url for both the scenarios
+ Go to the StepDefinition.java class in com.assess.stepDefinition package
+ StepDefinition.java contains the steps definitions of all the steps mentioned in feature file
+ com.assess.pageObjects package contains all the page objects used in designing the framework
+   SignInPage.java page object is used for both the scenarios i.e. for ordering a tshirt and udating personal information
+   Tshirt.java page object is used for selecting a tshirt and adding it to cart and navigate to Adrress page
+   Address.java page object is used to navigate to shipping page
+   Shipping.java page object is used to opt for shipping option and navigate to payment page
+   Payment.java page object is used to select payment method and navigate to Orderhistory page after successfully placing the order
+   OrderHistory.java page object is usde to verify the details of order placed
+   MyAccount.java page object is used to update the first name in personal information and navigate to home page after success message is displayed
+ BasePage.java class in com.assess.setup package is used to select and open the browser and to impose an implicit wait 
+ CommonStepDef.java is used to return the driver control and is extended by StepDefinition.java
+ Hooks.java extends BasePage.java and is used to open and close the browser for both the scenarios
+ Configuration.properties file in config folder is used to store configuration data which is prone to chanmge such as driver path,url,implicit wait time, and browser name.
+ ConfigFileReader.java in com.assess.dataProvider packaga is used to load and read the properties file
+ FileReaderManager.java in com.assess.manager package is used to crate an instance of ConfigFileReader.java class
+ 
+ Right click on the project and select Run As Maven Test
+ Can be run as JUnit Test also.
+
+
+
+Improvements that could be considered to develop the framework :
+==> We can use Extent Report in place normal reporting to produce awesome reports which has much more capability to produce test logs and better visual graphics.
+==> Since Behavior Driven Development (BDD) is one of the powerful development style. 
+    When BDD integrate with agile then it becomes more dynamic.
+
+
